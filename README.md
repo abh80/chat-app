@@ -1,1 +1,1 @@
-Source code of my [starstracker.xyz](https://starstracker.xyz)
+Super simple chat app made to learn angular well.
