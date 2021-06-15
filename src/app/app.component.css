@@ -1,0 +1,18 @@
+.hover-change-btn:hover {
+  background-color: #4a62b8;
+}
+.hover-change-btn :active {
+  background-color: #4a62b8;
+}
+.hover-change-btn {
+  background-color: #7289da;
+  transition: 0.5s all;
+}
+@media only screen and (max-width: 960px) {
+  .name-select-form {
+    width: 200px;
+  }
+}
+.name-select-form {
+  width: 500px;
+}
