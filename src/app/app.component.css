@@ -16,3 +16,6 @@
 .name-select-form {
   width: 500px;
 }
+.chat-holder {
+  overflow-y: auto;
+}

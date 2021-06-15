@@ -63,6 +63,9 @@ export class AppComponent implements OnInit {
         switch (data.type) {
           case 'MSG_CREATE':
             this.allChats.push({ name: data.name, content: data.content });
+            let ch = document.getElementById('chat-holder');
+            if (!ch) return;
+            ch.scroll({ top: ch.scrollHeight + 10000 });
         }
       } catch (e) {
         console.error(e);

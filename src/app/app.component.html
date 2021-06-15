@@ -1,17 +1,24 @@
-<div class="h-full relative p-10">
-  <div *ngFor="let item of allChats">
-    <chats [name]="item.name" [content]="item.content"></chats>
+<div class="h-full w-full">
+  <div id="chat-holder" class="relative w-full p-10 chat-holder" style="height: 90%;">
+    <div *ngFor="let item of allChats">
+      <chats [name]="item.name" [content]="item.content"></chats>
+    </div>
   </div>
+  <form
+    (submit)="formsubmit($event)"
+    class="bottom-0 absolute w-full p-10"
+    style="background: #191b1d"
+  >
+    <input
+      id="chat-bar"
+      placeholder="Type your message"
+      autocomplete="off"
+      class="rounded-lg h-10 w-full focus:outline-none p-5 focus:border-none"
+      style="background: #2c2f33"
+    />
+  </form>
 </div>
-<form (submit)="formsubmit($event)" class="bottom-0 sticky w-full p-10">
-  <input
-    id="chat-bar"
-    placeholder="Type your message"
-    autocomplete="off"
-    class="rounded-lg h-10 w-full focus:outline-none p-5 focus:border-none"
-    style="background: #2c2f33"
-  />
-</form>
+
 <div
   id="name-c"
   class="absolute w-full h-full top-0 right-0 left-0 justify-center"
@@ -19,13 +26,7 @@
 >
   <form
     class="m-auto relative rounded-md p-10 name-select-form"
-    style="
-      
-      height: 300px;
-      top: 50%;
-      margin-top: -150px;
-      background: #23272a;
-    "
+    style="height: 300px; top: 50%; margin-top: -150px; background: #23272a"
     (submit)="handleNameClick($event)"
   >
     <h1>Enter your name to display :</h1>
